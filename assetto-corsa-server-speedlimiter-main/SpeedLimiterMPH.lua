@@ -13,7 +13,7 @@ function checkSpeed()
     -- Get the player's car speed
     local carSpeed = ac.getCar(carIndex).speedKmh/1.609
     if carSpeed then
-        ac.debug('Speed', carSpeed)
+        ac.debug('Speed', carSpeed*1.609)
         -- if car slowed down, disable braking and reset message
         if carSpeed < extras.BRAKE_TO and brake == 1 then
             brake =  0
